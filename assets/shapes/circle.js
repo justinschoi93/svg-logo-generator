@@ -1,40 +1,13 @@
-const Shape = require('shapes.js');
+const Shape = require('./shape');
 
-class Circle extends Shape{
+
+class Circle {
     constructor(shapeColor){
-        super()
+        super(width, height);
+
+        this.shapeColor = shapeColor;
         this.shape = 'circle';
-        this.polygonPoints = ''
-        this.svgString = `<svg ${polygonPoints} ${shapeColor}></svg>`;
+        this.svgString = `<svg width="${width}" height="${height}" fill="${this.shapeColor}"><${this.shape}></svg>`
 
     }
-    
-    //will inherit render();
-    //console.log(this.render());
-}
-
-class Rectangle extends Shape{
-    constructor(shapeColor){
-        super()
-        this.shape = 'rectangle';
-        this.polygonPoints = ''
-        this.svgString = `<svg ${polygonPoints} ${shapeColor}></svg>`;
-
-    }
-    
-    //will inherit render();
-    //console.log(this.render());
-}
-
-class Triangle extends Shape{
-    constructor(shapeColor){
-        super()
-        this.shape = 'triangle';
-        this.polygonPoints = ''
-        this.svgString = `<svg ${polygonPoints} ${shapeColor}></svg>`;
-
-    }
-    
-    //will inherit render();
-    //console.log(this.render());
 }
