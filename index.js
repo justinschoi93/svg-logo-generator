@@ -46,7 +46,7 @@ const Triangle = require('./assets/shapes/triangle.js');
 
        //the logo.svg file is created 
         fs.writeFile('./assets/logo.svg', svgCode, (error)=>{error? console.log('error!'):console.log('success!')})
-
+        console.log(svgCode);
     });
 
 
