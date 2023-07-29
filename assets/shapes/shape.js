@@ -11,7 +11,7 @@ class Shape {
     }
 }
 
-const shape = new Shape(300, 300);
+const shape = new Shape();
 // console.log(shape.render());
 
 module.exports = Shape;
