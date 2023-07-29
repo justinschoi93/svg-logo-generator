@@ -1,27 +1,21 @@
-const Shape = require('./shape');
+const Shape = require('./shape.js');
 
 class Rectangle extends Shape{
-    constructor(shapeColor){
-        super()
+    constructor(shapeColor, letters, letterColor){
+        super();
+
+        this.shapeColor = shapeColor;
+        this.letters = letters;
+        this.letterColors = letterColor;
         this.shape = 'rectangle';
-        this.polygonPoints = ''
-        this.svgString = `<svg ${polygonPoints} ${shapeColor}></svg>`;
+        this.svgString = 
+        `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="${this.shapeColor}"/>
+            <text x="150" y="110" font-size="40" text-anchor="middle" fill="${this.letterColor}">${letters}</text>
+        </svg>`
 
     }
-    
-    //will inherit render();
-    //console.log(this.render());
 }
 
-class Triangle extends Shape{
-    constructor(shapeColor){
-        super()
-        this.shape = 'triangle';
-        this.polygonPoints = ''
-        this.svgString = `<svg ${polygonPoints} ${shapeColor}></svg>`;
-
-    }
-    
-    //will inherit render();
-    //console.log(this.render());
-}
+const rectangle = new Rectangle('red', 'ABC', 'white');
+console.log(rectangle);
