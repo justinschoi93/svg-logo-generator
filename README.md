@@ -19,8 +19,8 @@ We were asked to develop an application that can be run through the terminal/com
 2. Answer prompts
 3. The logo.svg will appear in assets folder. 
 
-![the code](./Develop/assets/screenshot1.jpg)
-![Check out the Walk-through video!](./Develop/assets/walkthrough.webm)
+![the code](./assets/screenshot1.jpg)
+![Check out the Walk-through video!](./assets/walkthrough.webm)
 
 ## User Story
 
