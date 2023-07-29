@@ -1,14 +1,13 @@
 //Dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Shape = require('./assets/shapes/shape.js');
-const Circle = require('./assets/shapes/cirle.js');
+const Circle = require('./assets/shapes/circle.js');
 const Rectangle = require('./assets/shapes/rectangle.js');
 const Triangle = require('./assets/shapes/triangle.js');
 
 
-
-inquirer
+    
+    inquirer
     .prompt([
         {
             name: 'letters',
@@ -36,22 +35,31 @@ inquirer
     ])
     .then (response => {
         
-     
-        
+       
+       const svgCode = generateLogo(response);
+        // console.log(svgCode)
+        fs.writeFile('./assets/logo.svg', svgCode, (error)=>{error? console.log('error!'):console.log('success!')})
 
     });
 
-function generateSVG(data){
+
+
+
+function generateLogo(data){
     //will accept shape, letters, colors, and return SVG code
     if (data.shape.toLowerCase() === 'circle') {
-        const shape = new Circle();
-        const newLogo = 
+        const shape = new Circle(data.shapeColor, data.letters, data.letterColor);
+        return shape.render();
     } else if (data.shape.toLowerCase() === 'rectangle') {
-        const shape = new Rectangle();
+        const shape = new Rectangle(data.shapeColor, data.letters, data.letterColor);
+        return shape.render();
     } else if (data.shape.toLowerCase() === 'triangle') {
-        const shape = new Triangle();
-    } 
+        const shape = new Triangle(data.shapeColor, data.letters, data.letterColor);
+        return shape.render();
+    };
+    
+};
 
-    shape.setColor(data.shapeColor);
-    shape.
-}
+
+
+// const newLogo = generateLogo()

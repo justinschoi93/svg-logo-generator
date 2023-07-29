@@ -9,13 +9,15 @@ class Rectangle extends Shape{
         this.letterColors = letterColor;
         this.shape = 'rectangle';
         this.svgString = 
-        `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="${this.shapeColor}"/>
-            <text x="150" y="110" font-size="40" text-anchor="middle" fill="${this.letterColor}">${letters}</text>
-        </svg>`
+`<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="${this.shapeColor}"/>
+    <text x="150" y="110" font-size="40" text-anchor="middle" fill="${this.letterColor}">${letters}</text>
+</svg>`
 
     }
 }
 
 const rectangle = new Rectangle('red', 'ABC', 'white');
-console.log(rectangle);
+// console.log(rectangle.render());
+
+module.exports = Rectangle;

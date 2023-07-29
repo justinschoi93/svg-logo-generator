@@ -12,11 +12,13 @@ class Triangle extends Shape{
 `
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     <polygon points="150,0 300,200 0,200" fill="${this.shapeColor}"/>
-    <text x="150" y="110" font-size="40" text-anchor="middle" fill="${this.letterColor}">${this.letters}</text>
+    <text x="150" y="140" font-size="60" text-anchor="middle" fill="${this.letterColor}">${this.letters}</text>
 </svg>
 `
     }
 }
 
 const triangle = new Triangle('white', 'ABC', 'purple');
-console.log(triangle);
+// console.log(triangle.render());
+
+module.exports = Triangle;

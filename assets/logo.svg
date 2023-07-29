@@ -1,7 +1,4 @@
-AAA 
-    Blue 
-    circle
-    Green
-    
-    
-    
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="150" cy="100" r="55" fill="Purple" />
+    <text x="150" y="110" font-size="40" text-anchor="middle" fill="White">AAA</text>
+</svg>
